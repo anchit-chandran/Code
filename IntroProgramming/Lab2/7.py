@@ -1,5 +1,5 @@
 import random
-
+import os
 
 class Board:
     def __init__(self):
@@ -122,7 +122,7 @@ class Board:
         # Player already wins, don't allow computer to play
         if self.game_end:
             return
-        
+
         computer_choice = self._get_computer_move()
         self.make_move(computer_choice)
 
@@ -149,12 +149,13 @@ class Board:
 
 
 def solution_7():
+    os.system('cls')
     board = Board()
     print("👋 Welcome to the Tic Tac Toe game!")
     print("Player [O] plays first against Computer [X]")
     board.display_board()
     while not board.game_end:
-        player_move = input("🤔 Make your move [1-9]: ")
+        player_move = input("🤔 Make your [O] move [1-9]: ")
         board.play(player_move)
 
 
