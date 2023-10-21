@@ -27,6 +27,7 @@ class Robot1:
         
         self.battery_charge += charge
 
-rb = Robot1()
-rb.move(11)
-rb.move(11)
+if __name__ == '__main__':
+    rb = Robot1()
+    rb.move(11)
+    rb.move(11)
